@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>업데이트 페이지</title>
+    <link rel=" stylesheet" href="./css/common.css">
+</head>
+
+<body>
+    <!--눈 내리는 효과-->
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header_title">
+            <h1><a href="./index.html">MiNi Board</a></h1>
+        </div>    
+    </header>   
+    
+    <main>
+        <!--form 태그에 입력한 내용을 인덱스페이지에 보내고, 보안을 위해 암호화 방식으로 전달되는 post로 작성함-->
+        <form action="./index.html" method="post">    
+            <div class="main_middle">
+                <div class="line_item">
+                    <div class="line_item_title">게시글 번호</div>
+                    <div class="line_item_content_2">7</div>
+                </div>
+
+                <div class="line_item">
+                    <label for="title" class="line_item_title">
+                        <div>제목</div>
+                    </label>
+                    <div class="line_item_content">
+                        <input type="text" name="title" id="title">
+                    </div>
+                </div>
+
+                <div class="line_item">
+                    <label for="title" class="line_item_title">
+                        <div class="line_item_title_content">내용</div>
+                    </label>
+                    <div class="line_item_content">
+                        <textarea name="content" id="content" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main_bottom">
+                <button type="submit" class="bottom_button" id="insert_main_button">완료</button>
+                <a href="./index.html" class="bottom_button" id="insert_main_button">취소</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

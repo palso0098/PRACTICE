@@ -1,0 +1,322 @@
+/*눈 내리는 효과*/
+.snowflake {
+    color: #ffffff;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
+}
+   
+.snowflake,.snowflake .inner {
+    animation-iteration-count:infinite;
+    animation-play-state:running
+}
+
+@keyframes snowflakes-fall {
+    0%{transform:translateY(0)}
+    100%{transform:translateY(110vh)}
+}
+@keyframes snowflakes-shake {
+    0%,100%{transform:translateX(0)}
+    50%{transform:translateX(80px)}
+}
+
+.snowflake {
+    position:fixed;
+    top:-10%;
+    z-index:9999;
+    -webkit-user-select:none;
+    user-select:none;
+    cursor:default;
+    animation-name:snowflakes-shake;
+    animation-duration:3s;
+    animation-timing-function:ease-in-out
+}
+
+.snowflake .inner {
+    animation-duration:10s;
+    animation-name:snowflakes-fall;
+    animation-timing-function:linear
+}
+
+.snowflake:nth-of-type(0) {
+    left:1%;
+    animation-delay:0s
+}
+
+.snowflake:nth-of-type(0) .inner {
+    animation-delay:0s
+}
+
+.snowflake:first-of-type {
+    left:10%;
+    animation-delay:1s
+}
+
+.snowflake:first-of-type .inner,.snowflake:nth-of-type(8) .inner {
+    animation-delay:1s
+}
+
+.snowflake:nth-of-type(2) {
+    left:20%;
+    animation-delay:.5s
+}
+
+.snowflake:nth-of-type(2) .inner,.snowflake:nth-of-type(6) .inner {
+    animation-delay:6s
+}
+
+.snowflake:nth-of-type(3) {
+    left:30%;
+    animation-delay:2s
+}
+
+.snowflake:nth-of-type(11) .inner,.snowflake:nth-of-type(3) .inner {
+    animation-delay:4s
+}
+
+.snowflake:nth-of-type(4) {
+    left:40%;animation-delay:2s
+}
+
+.snowflake:nth-of-type(10) .inner,.snowflake:nth-of-type(4) .inner {
+    animation-delay:2s
+}
+.snowflake:nth-of-type(5) {
+    left:50%;animation-delay:3s
+}
+
+.snowflake:nth-of-type(5) .inner {
+    animation-delay:8s
+}
+
+.snowflake:nth-of-type(6) {
+    left:60%;
+    animation-delay:2s
+}
+
+.snowflake:nth-of-type(7) { 
+    left:70%;
+    animation-delay:1s
+}
+
+.snowflake:nth-of-type(7) .inner {
+    animation-delay:2.5s
+}
+
+.snowflake:nth-of-type(8) {
+    left:80%;animation-delay:0s
+}
+
+.snowflake:nth-of-type(9) {
+    left:90%;
+    animation-delay:1.5s
+}
+
+.snowflake:nth-of-type(9) .inner {
+    animation-delay:3s
+}
+
+.snowflake:nth-of-type(10) {
+    left:25%;
+    animation-delay:0s
+}
+
+.snowflake:nth-of-type(11) {
+    left:65%;
+    animation-delay:2.5s
+}
+
+
+
+/*전체 스타일*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/*인덱스 스타일*/
+h1 {
+    padding: 50px; /*'MiNi Board'를 웹 브라우저 윗 부분을 띄우게 하기위해 h1태그에 padding을 주었음*/
+    text-align: center;
+}
+
+h1 > a {
+    padding: 5px 65px; /*'MiNi Board'의 배경색의 너비와 글자를 추가해도 자동으로 넓어질 수 있게 padding으로 위,아래는 5px을 주고 양옆은 65px을 주었음*/
+    background-color: #DAE1FD;
+    border-radius: 30px;
+    color: #5776FA;
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+.insert_button:hover {
+    border: solid 3px #FFF;
+    background-color: #6a86ff;
+}
+
+main {
+    background-color: #DAE1FD;
+    width: 600px;
+    margin: 0 auto; /*'main'을 화면 중앙에 넣기위해 위,아래는 값을 주지않고 양옆은 균등하게 값(auto)을 주었음*/
+    padding: 40px 30px;
+}
+
+.main_top {
+    text-align: right;
+}
+
+.insert_button {
+    background-color: #8FA2FB;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FFF;
+    padding: 8px 30px;
+    text-align: center;
+}
+
+
+.item_list_head {
+    background-color: #8FA2FB;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #FFF;
+    margin-top: 30px;
+    padding: 7px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+.item {
+    background-color: #FFF;
+    font-size: 1rem;
+    text-align: center;
+    margin: 8px auto;
+    padding: 7px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+.item_title {
+    font-weight: 600;
+}
+
+.main_bottom {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.bottom_button {
+    display: inline-block; /*문자의 갯수로 인해 모양이 다른 버튼을 통일 시키기 위해 두가지 요소를 한번에 줌*/
+    background-color: #8FA2FB;
+    margin: 2px;
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+    line-height: 45px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #FFF;
+}
+
+.bottom_button:hover {
+    background-color: #6a86ff;
+}
+
+
+
+/*인서트 스타일*/
+.line_item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    color: #FFF;
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin: 8px;
+}
+
+.line_content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.line_item_title {
+    background-color: #8FA2FB;
+    padding: 5px;
+    border-radius: 20px 0 0 20px;
+    text-align: center;
+}
+
+.line_item_title_content {
+    margin-top: 55px;
+}
+
+.line_item_content {
+    background-color: #FFF;
+    border-radius: 0 20px 20px 0;
+}
+
+input, textarea {
+    width: 95%; /*input 태그와 textarea 태그의 너비를 조절해줌*/
+    background-color: transparent; /*배경색을 보이게 하기 위해 input 태그와 textarea 태그의 기본색을 투명하게 해줌*/
+    border-style: none; /*input 태그와 textarea 태그의 외관선을 없애줌*/
+}
+
+input, textarea:focus {
+    outline: none; /*클릭 시 input 태그와 textarea 태그의 기본 외곽선을 없애줌*/
+}
+
+textarea {
+    resize: none; /*textarea 태그의 사이즈를 사용자가 조절을 못하게 없애줌*/
+}
+
+#insert_main_button {
+    border: none; /*button 태그의 외곽선을 없애줌*/
+}
+
+
+
+/*디테일 페이지*/
+.line_item_content_2 {
+    background-color: #FFF;
+    border-radius: 0 20px 20px 0;
+    color: #000;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 4px;
+}
+
+
+
+/*업데이트 스타일*/
+.main_middle_message {
+    text-align: center;
+    padding-bottom: 30px;
+    margin: 30px;
+}
+
+.main_middle_message_blink {
+    animation: blink 2s step-end infinite; /*애니메이션 효과를 2초 간격으로 처음을 기준으로 무한반복을 줌*/
+}
+
+/*크롬에서 애니메이션 효과를 주기위해 '@-webkit-keyframes'태그를 넣어줌*/
+@-webkit-keyframes blink {
+    0% {
+        color: #617AFF;
+        font-weight: 900;
+    }
+    50% {
+        color: white;
+        font-weight: 900;
+    }
+}
