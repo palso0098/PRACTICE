@@ -18,15 +18,19 @@
 
     <main>
         <div class="main_top">
-            <div class="main_top_img"></div>
-            <input type="text" name="main_title" id="main_title">
+            <img src="./sample/1.png" alt="main_top_img" style="width: 190px;" id="main_top_img"> <!--CSS에 백그라운드 이미지가 안 넣어져서 body부분에 이미지를 따로 넣음-->
+            <input type="text" name="main_title" id="main_top_title" placeholder="오늘의 할일  2024/ 3/ 24  일">
         </div>
 
         <div class="main_middle">
-            <div class="checkbox_1">
-                <input type="checkbox" name="option_1" value="value_1">
-                <label for="housework">집안일 하기</label>
-                <div> </div>
+            <div class="main_middle_content">
+                <div class="main_middle_custom_checkbox">
+                    <input type="checkbox" name="checkbox" value="checkbox" id="click">
+                    <label for="click"></label>
+                </div>    
+                <label for="housework" class="checkbox_content">집안일 하기</label>
+                <button type="button" class="checkbox_button">+</button>
+                <div class="checkbox_empty"> </div>
                 <div class="checkbox_memo">빨래</div>
             </div>
             <div class="checkbox_2">

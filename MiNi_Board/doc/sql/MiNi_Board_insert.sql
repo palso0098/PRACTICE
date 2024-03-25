@@ -1,4 +1,4 @@
-USE MiNi_Board;
+USE mini_board;
 
 INSERT INTO boards(title, content)
 
@@ -33,4 +33,5 @@ VALUES
 ,("제목28","내용28")
 ,("제목29","내용29")
 ,("제목30","내용30")
+;
 
