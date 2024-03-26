@@ -11,70 +11,13 @@
     font-weight: normal;
     font-style: normal;
 }
-  
-
-
-/*전체 스타일*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 
 
-/*인덱스 스타일*/
-.header_title { /*border의 위치를 주기 위해서 margin-left와 margin-right를 각각 따로 설정을 해 중앙을 맞춤*/
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 850px;
-    text-align: center;
-    border-bottom: solid 6px #000;
-    font-family: "Black Han Sans", sans-serif;
-    letter-spacing: 0.1rem;
-    font-size: 2rem;
-}
-
-.main_top {
-    text-align: center;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 25px;
-    width: 850px;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    border-bottom: solid 3px #000;
-}
-
-#main_top_title {
-    margin-top: 30px;
-    height: 60px;
-    border-style: none;
-    font-size: 1.3rem;
-    font-family: 'KCCChassam';
-    font-weight: bold;
-    color: #000;
-}
-
-.main_middle {
-    margin-left: auto;
-    margin-right: auto;
-    width: 850px;
-    text-align: center;
-}
-
-.main_middle_content {
-    display: grid;
-    grid-template-columns: 0.2fr 2fr 0.1fr 0.1fr 1fr;
-    padding: 8px;
-    border-bottom: solid 3px #000;
-}
 
 /*커스텀 체크박스 시작*/
 input {
-	display: none;
+    display: none;
 }
 
 .click_label {
@@ -145,3 +88,63 @@ input[id="click"]:checked + .click_label::before {
       height: 24px;
     }
   }
+
+  
+
+/*전체 스타일*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*인덱스 스타일*/
+.header_title { /*border의 위치를 주기 위해서 margin-left와 margin-right를 각각 따로 설정을 해 중앙을 맞춤*/
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 850px;
+    text-align: center;
+    border-bottom: solid 6px #000;
+    font-family: "Black Han Sans", sans-serif;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+}
+
+.main_top {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 25px;
+    width: 850px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border-bottom: solid 3px #000;
+}
+
+#main_top_title {
+    margin-top: 30px;
+    height: 60px;
+    border-style: none;
+    font-size: 1.3rem;
+    font-family: 'KCCChassam';
+    font-weight: bold;
+    color: #000;
+}
+
+.main_middle {
+    margin-left: auto;
+    margin-right: auto;
+    width: 850px;
+    text-align: center;
+}
+
+.main_middle_content {
+    display: grid;
+    grid-template-columns: 0.2fr 2fr 0.1fr 0.1fr 1fr;
+    padding: 8px;
+    border-bottom: solid 3px #000;
+}

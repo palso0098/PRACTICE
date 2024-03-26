@@ -49,3 +49,21 @@ function db_select_boards_cnt(&$conn) {
 
     return (int)$result[0]["cnt"];
 }
+
+function db_insert_boards($conn, $array_param) {
+    $sql = 
+        " INSERT INTO boards( "
+        ." title "
+        ." ,content "
+        ." ) "
+        ." VALUES( "
+        ." :title "
+        ." ,:content "
+        ." ) "
+    ;
+
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($array_param);
+
+    return $stmt->rowCount();
+}
