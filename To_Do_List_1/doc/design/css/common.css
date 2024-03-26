@@ -148,3 +148,7 @@ input[id="click"]:checked + .click_label::before {
     padding: 8px;
     border-bottom: solid 3px #000;
 }
+
+#click:checked ~ label[for="housework"] {
+    text-decoration: line-through;
+}
