@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,6 @@
     <link rel=" stylesheet" href="./css/common.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -23,58 +22,66 @@
         </div>
 
         <div class="main_middle">
-            <div class="main_middle_content">
-                <input type="checkbox" name="checkbox" value="checkbox" id="click">
-                <label for="click" class="click_label"></label>
-                <label for="housework" class="checkbox_content">집안일 하기</label>
-                <button type="button" class="checkbox_button">+</button>
-                <div class="checkbox_empty"> </div>
-                <div class="checkbox_memo">빨래</div>
-            </div>
-            <div class="checkbox_2">
-                <input type="checkbox" name="option_1" value="value_1">
-                <label for="bank">은행 갔다오기</label>
-            </div>
-            <div class="checkbox_3">
-                <input type="checkbox" name="option_1" value="value_1">
-                <label for="study">공부하기</label>
-            </div>
-            <div class="checkbox_4">
-                <input type="checkbox" name="option_1" value="value_1">
-                <label for="study">공부하기</label>
-            </div>
-            <div class="checkbox_5">
-                <input type="checkbox" name="option_1" value="value_1">
-                <label for="study">공부하기</label>
-            </div>
-            <div class="checkbox_6">
-                <input type="checkbox" name="option_1" value="value_1">
-                <label for="study">공부하기</label>
-            </div>
-            <div class="checkbox_7">
-                <input type="checkbox" name="option_1" value="value_1">
-                <label for="study">공부하기</label>
-            </div>
-            <div class="checkbox_8">
-                <input type="checkbox" name="option_1" value="value_1">
-                <label for="study">공부하기</label>
-            </div>
-            <div class="checkbox_9">
-                <input type="checkbox" name="option_1" value="value_1">
-                <label for="study">공부하기</label>
-            </div>
-            <div class="checkbox_10">
-                <input type="checkbox" name="option_1" value="value_1">
-                <label for="study">공부하기</label>
-            </div>
-            <div class="checkbox_11">
-                <input type="checkbox" name="option_1" value="value_1">
-                <label for="study">공부하기</label>
-            </div>
-            <div class="checkbox_12">
-                <input type="checkbox" name="option_1" value="value_1">
-                <label for="study">공부하기</label>
-            </div>
+            <form action="./upsert.php" method="post">
+                <div class="main_middle_content">
+                    <input type="checkbox" name="checkbox" id="checkbox_1">
+                    <label for="checkbox_1" class="click_label"></label>
+                    <input type="text" name="content" value="집안일 하기">
+                    <button type="submit" class="btn-upsert">+</button>
+                    <div class="checkbox_empty"> </div>
+                    <input type="text" name="memo" value="빨래" class="checkbox_memo">
+                </div>
+            </form>
+            <form action="./upsert.php" method="post">
+                <div class="main_middle_content">
+                    <input type="checkbox" name="checkbox" id="checkbox_2">
+                    <label for="checkbox_2" class="click_label"></label>
+                    <input type="text" name="content" value="공부하기">
+                    <button type="submit" class="btn-upsert">+</button>
+                    <div class="checkbox_empty"></div>
+                    <input type="text" name="memo" value="코딩" class="checkbox_memo">
+                </div>
+            </form>
+            <form action="./upsert.php" method="post">
+                <div class="main_middle_content">
+                    <input type="checkbox" name="checkbox" id="checkbox_2">
+                    <label for="checkbox_2" class="click_label"></label>
+                    <input type="text" name="content" value="잠자기">
+                    <button type="submit" class="btn-upsert">+</button>
+                    <div class="checkbox_empty"></div>
+                    <input type="text" name="memo" value="피로회복을 위해 12시간" class="checkbox_memo">
+                </div>
+            </form>
+            <form action="./upsert.php" method="post">
+                <div class="main_middle_content">
+                    <input type="checkbox" name="checkbox" id="checkbox_2">
+                    <label for="checkbox_2" class="click_label"></label>
+                    <input type="text" name="content" value=" ">
+                    <button type="submit" class="btn-upsert">+</button>
+                    <div class="checkbox_empty"></div>
+                    <input type="text" name="memo" value=" " class="checkbox_memo">
+                </div>
+            </form>
+            <form action="./upsert.php" method="post">
+                <div class="main_middle_content">
+                    <input type="checkbox" name="checkbox" id="checkbox_2">
+                    <label for="checkbox_2" class="click_label"></label>
+                    <input type="text" name="content" value=" ">
+                    <button type="submit" class="btn-upsert">+</button>
+                    <div class="checkbox_empty"></div>
+                    <input type="text" name="memo" value=" " class="checkbox_memo">
+                </div>
+            </form>
+            <form action="./upsert.php" method="post">
+                <div class="main_middle_content">
+                    <input type="checkbox" name="checkbox" id="checkbox_2">
+                    <label for="checkbox_2" class="click_label"></label>
+                    <input type="text" name="content" value=" ">
+                    <button type="submit" class="btn-upsert">+</button>
+                    <div class="checkbox_empty"></div>
+                    <input type="text" name="memo" value=" " class="checkbox_memo">
+                </div>
+            </form>
         </div>
     </main>
 </body>
