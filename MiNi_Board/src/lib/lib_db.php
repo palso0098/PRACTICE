@@ -67,3 +67,39 @@ function db_insert_boards($conn, $array_param) {
 
     return $stmt->rowCount();
 }
+
+function db_select_boards_no(&$conn, &$array_param) {
+    $sql =
+        " SELECT "			
+	    ." no "		
+	    ." ,title "		
+	    ." ,content "		
+	    ." ,created_at "		
+        ." FROM "			
+	    ." boards "		
+        ." WHERE "			
+	    ." no = :no "
+    ;
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($array_param);
+    $result = $stmt->fetchAll();
+
+    return $result;
+}
+
+
+function db_select_boards_no(&$conn, &$array_param) {
+    $sql = 
+        " UPDATE boards"
+        ." SET "
+        ." deleted_at = NOW() "
+        ." WHERE "
+        ." no = :no "
+    ;
+    
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($array_parm);
+
+    return $stmt->rowCount();
+}
+?>
