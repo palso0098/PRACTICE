@@ -99,6 +99,23 @@ function db_select_boards_no(&$conn, &$array_param) {
     
     $stmt = $conn->prepare($sql);
     $stmt->execute($array_parm);
+    
+    return $stmt->rowCount();
+}
+
+function db_update_boards_no(&$conn, &$array_param) {
+    $sql = 
+        " UPDATE boards"
+        ." SET "
+        ." title = :title "
+        ." ,content = :content"
+        ." ,updated_at = NOW()"
+        ." WHERE "
+        ." no = :no "
+    ;
+    
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($array_parm);
 
     return $stmt->rowCount();
 }
